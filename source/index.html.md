@@ -110,3 +110,25 @@ type  | 是 | String | 取值有BIND_EMAIL 绑定邮箱<br/>BIND_PHONE 绑定手
 }
 ```
 **响应结果**
+
+## 发送短信验证码(无登录状态下)
+
+**HTTP Request**
+
+`POST /message/public-sms`
+
+**请求参数**
+
+参数 | 必选 | 类型 | 说明
+---- | ---- | ---- | ---- 
+phone | 否 | String | 绑定邮箱时必填
+type  | 是 | String | 取值有BIND_EMAIL 绑定邮箱<br/>BIND_PHONE 绑定手机<br/>BIND_GOOGLE 绑定谷歌<br/>CHANGE_LOGIN_PASSWD 修改登录密码<br/> SET_ANTI_PHISHING_CODE 设置防钓鱼码<br/> WITHDRAW 提币<br/> ADD_WITHDRAW_ADDRESS 添加提币地址<br/>
+
+```json
+{
+  "code": 0,
+  "message": "ok",
+  "data": true
+}
+```
+**响应结果**
