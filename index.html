@@ -246,6 +246,9 @@
                   <li>
                     <a href="#bb33947ba1" class="toc-h2 toc-link" data-title="发送邮箱验证码（登录状态下）">发送邮箱验证码（登录状态下）</a>
                   </li>
+                  <li>
+                    <a href="#7e9f215d27" class="toc-h2 toc-link" data-title="发送短信验证码(无登录状态下)">发送短信验证码(无登录状态下)</a>
+                  </li>
               </ul>
           </li>
       </ul>
@@ -388,6 +391,41 @@
 </thead><tbody>
 <tr>
 <td>email</td>
+<td>否</td>
+<td>String</td>
+<td>绑定邮箱时必填</td>
+</tr>
+<tr>
+<td>type</td>
+<td>是</td>
+<td>String</td>
+<td>取值有BIND_EMAIL 绑定邮箱<br/>BIND_PHONE 绑定手机<br/>BIND_GOOGLE 绑定谷歌<br/>CHANGE_LOGIN_PASSWD 修改登录密码<br/> SET_ANTI_PHISHING_CODE 设置防钓鱼码<br/> WITHDRAW 提币<br/> ADD_WITHDRAW_ADDRESS 添加提币地址<br/></td>
+</tr>
+</tbody></table>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p><strong>响应结果</strong></p>
+<h2 id='7e9f215d27'>发送短信验证码(无登录状态下)</h2>
+<p><strong>HTTP Request</strong></p>
+
+<p><code>POST /message/public-sms</code></p>
+
+<p><strong>请求参数</strong></p>
+
+<table><thead>
+<tr>
+<th>参数</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>phone</td>
 <td>否</td>
 <td>String</td>
 <td>绑定邮箱时必填</td>
